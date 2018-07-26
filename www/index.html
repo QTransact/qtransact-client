@@ -34,7 +34,7 @@
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
 		
 		<!-- Bootstrap core CSS -->
-		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
 		<!-- Custom styles for this template -->
 		<link href="css/album.css" rel="stylesheet" type="text/css">
@@ -64,10 +64,10 @@
           <p class="lead text-muted">Trade anything, anywhere.</p>
 		  <div class="row">
 		      <div class="col">
-              <a href="#" class="btn btn-primary my-1 btn-block box-shadow">Trade Items</a>
+              <button id="trade" class="btn btn-secondary my-1 btn-block box-shadow">Trade Items</button>
 			  </div>
 			  <div class="col">
-              <a href="#" class="btn btn-primary my-1 btn-block box-shadow">View inventory</a>
+              <button id="inventory" class="btn btn-secondary my-1 btn-block box-shadow">View inventory</button>
 			  </div>
 		  </div>
         </div>
@@ -79,49 +79,36 @@
 		
 
 
-    <main role="main" class="container">
+    <main id="main-board" role="main" class="container">
 
-      <div class="my-3 p-3 bg-white rounded box-shadow">
-        <h6 class="border-bottom border-gray pb-2 mb-0">Recent Offers</h6>
+      <div id="offer-list" class="my-3 p-3 bg-white rounded box-shadow">
+        <h6 class="border-bottom border-gray pb-2 mb-0">Offer List</h6>
+		
+		
         <div class="media text-muted pt-3">
-          <img data-src="holder.js/32x32?theme=thumb&bg=007bff&fg=007bff&size=1" alt="" class="mr-2 rounded">
           <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
             <strong class="d-block text-gray-dark">Minecraft</strong>
-            <img src="img/minecraft.png" style="height:64px;padding-right:10px">2-story wooden house.<a href="#" class="btn btn-primary my-1 box-shadow float-right">Buy Now</a>
+			
+            <img src="img/diamond.png" style="height:64px;padding-right:10px">
+			<strong>Item : </strong>Diamond<br>
+			<strong>Server : </strong>Minecraft Romania Official<br>
+			<strong>Trader : </strong>Antonio<br>
+			<strong>Price : </strong>100$<br>
+			<strong>Available: </strong>1540<br>
+			<button class="btn btn-primary my-1 box-shadow float-right">Buy Now</button>
           </p>
-        </div>
-        <div class="media text-muted pt-3">
-          <img data-src="holder.js/32x32?theme=thumb&bg=e83e8c&fg=e83e8c&size=1" alt="" class="mr-2 rounded">
-          <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
-            <strong class="d-block text-gray-dark">Rust</strong>
-            <img src="img/rust.jpg" style="height:64px;padding-right:10px">Full reinforced metal base.<a href="#" class="btn btn-primary my-1 box-shadow float-right">Buy Now</a>
-          </p>
-        </div>
-        <div class="media text-muted pt-3">
-          <img data-src="holder.js/32x32?theme=thumb&bg=6f42c1&fg=6f42c1&size=1" alt="" class="mr-2 rounded">
-          <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
-            <strong class="d-block text-gray-dark">GTA 5</strong>
-            <img src="img/gta5.png" style="height:64px;padding-right:10px">Ford Mustang<a href="#" class="btn btn-primary my-1 box-shadow float-right">Buy Now</a>
-          </p>
-        </div>
-        <div class="media text-muted pt-3">
-          <img data-src="holder.js/32x32?theme=thumb&bg=6f42c1&fg=6f42c1&size=1" alt="" class="mr-2 rounded">
-          <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
-            <strong class="d-block text-gray-dark">GTA 5</strong>
-            <img src="img/ak47.png" style="height:64px;padding-right:10px">AK47<a href="#" class="btn btn-primary my-1 box-shadow float-right">Buy Now</a>
-          </p>
-        </div>
-        <div class="media text-muted pt-3">
-          <img data-src="holder.js/32x32?theme=thumb&bg=6f42c1&fg=6f42c1&size=1" alt="" class="mr-2 rounded">
-          <p class="media-body pb-3 mb-0 small lh-125">
-            <strong class="d-block text-gray-dark">Minecraft</strong>
-            <img src="img/diamond.png" style="height:64px;padding-right:10px">Diamonds<a href="#" class="btn btn-primary my-1 box-shadow float-right">Buy Now</a>
-          </p>
-        </div>
       </div>
-    </main>
+	  </div>
+      <div id="inventory-list" class="my-3 p-3 bg-white rounded box-shadow">
+        <h6 class="border-bottom border-gray pb-2 mb-0">Your Items</h6>
+		
+		
 
 	  </div>
+
+    </main>
+
+
       </div>
 
     </main>
@@ -137,8 +124,11 @@
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="js/bootstrap.min.js"></script>
+    <!-- Placed at the end of the document so the pages load faster -->]
+	
+    <script src="bootstrap/js/jquery-slim.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+	
         <script type="text/javascript" src="js/index.js"></script>
 		<script type="text/javascript" src="cordova.js"></script>
 	</div>
