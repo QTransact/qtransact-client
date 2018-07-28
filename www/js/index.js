@@ -114,6 +114,34 @@ function addInventoryItem( itemData ){
 	inventoryList.appendChild(iDiv);
 }
 
+function addTradeOffer( tradeData ){
+	var iDiv = document.createElement('div');
+	iDiv.id = 'item-' + tradeData.itemID;
+	iDiv.className = 'block';
+	iDiv.innerHTML = `
+        <div class="media text-muted pt-3">
+          <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+            <strong class="d-block text-gray-dark">` + tradeData.item.game + `</strong>
+			
+            <img src="img/` + tradeData.item.image +`" style="height:64px;padding-right:10px">
+			<strong>Item : </strong>`+ tradeData.item.displayName +`<br>
+			<strong>Server : </strong>`+ tradeData.item.serverName +`<br>
+			<strong>Trader : </strong>`+ tradeData.traderName+`<br>
+			<strong>Price : </strong>`+ tradeData.price+`<br>
+			<button class="btn btn-primary my-1 box-shadow float-right">Buy Now</button>
+          </p>
+        </div>`;
+	offerList.appendChild(iDiv);
+}
 
+var testItem = {itemID: 10,game:"GTA 5 MP",image:"heli.png",displayName:"Apache Helicopter", name:"mustang", serverName:"Nitro GTA 5 Romania"}
 
-addInventoryItem({itemID: 10,game:"GTA 5 MP",image:"mustang.png",displayName:"Ford Mustang GT", name:"mustang", serverName:"Nitro GTA 5 Romania"});
+addInventoryItem( {itemID: 1032,game:"GTA 5 MP",image:"mustang.png",displayName:"Ford Mustang GT", name:"mustang", serverName:"Nitro GTA 5 Romania"} );
+addInventoryItem( {itemID: 112330,game:"Rust",image:"metalfrags.png",displayName:"Metal Fragments", name:"metalfrags", serverName:"Blueberry x5 Zeus"} );
+addInventoryItem( {itemID: 1123330,game:"Rust",image:"wood.png",displayName:"Wood", name:"wood", serverName:"Blueberry x5 Zeus"} );
+addInventoryItem( {itemID: 1123330,game:"Rust",image:"bullet.png",displayName:"AK47 Ammo", name:"ammo", serverName:"Blueberry x5 Zeus"} );
+addInventoryItem( {itemID: 102323,game:"Minecraft",image:"emerald.png",displayName:"Emerald", name:"emerald", serverName:"Minecraft Azure Romania"} );
+
+var testTrade = { item: testItem, traderName: "Zenibryum", price:"1,000,000$" };
+
+addTradeOffer( testTrade );
