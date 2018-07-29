@@ -100,16 +100,15 @@ function addInventoryItem( itemData ){
 	var iDiv = document.createElement('div');
 	iDiv.id = 'item-' + itemData.itemID;
 	iDiv.className = 'block';
-	iDiv.innerHTML=`<div class="media text-muted pt-3">
-	  <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
-		<strong class="d-block text-gray-dark">` + itemData.game + `</strong>
-		
-		<img src="img/` + itemData.image + `" style="height:64px;padding-right:10px">
-		<strong>Item : </strong>` + itemData.displayName + `<br>
-		<strong>Server : </strong>` + itemData.serverName + `<br>
-		<button class="btn btn-primary my-1 box-shadow float-right">Sell Now</button>
-	  </p>
-	  </div>`;
+	iDiv.innerHTML='<div class="media text-muted pt-3">\
+	  <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">\
+		<strong class="d-block text-gray-dark">' + itemData.game + '</strong>\
+		<img src="img/'	+ itemData.image + '" style="height:64px;padding-right:10px">\
+		<strong>Item : </strong>' + itemData.displayName + '<br>\
+		<strong>Server : </strong>' + itemData.serverName + '<br>\
+		<button class="btn btn-primary my-1 box-shadow float-right">Sell Now</button>\
+	  </p>\
+	  </div>';
 	
 	inventoryList.appendChild(iDiv);
 }
@@ -118,19 +117,17 @@ function addTradeOffer( tradeData ){
 	var iDiv = document.createElement('div');
 	iDiv.id = 'item-' + tradeData.itemID;
 	iDiv.className = 'block';
-	iDiv.innerHTML = `
-        <div class="media text-muted pt-3">
-          <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
-            <strong class="d-block text-gray-dark">` + tradeData.item.game + `</strong>
-			
-            <img src="img/` + tradeData.item.image +`" style="height:64px;padding-right:10px">
-			<strong>Item : </strong>`+ tradeData.item.displayName +`<br>
-			<strong>Server : </strong>`+ tradeData.item.serverName +`<br>
-			<strong>Trader : </strong>`+ tradeData.traderName+`<br>
-			<strong>Price : </strong>`+ tradeData.price+`<br>
-			<button class="btn btn-primary my-1 box-shadow float-right">Buy Now</button>
-          </p>
-        </div>`;
+	iDiv.innerHTML = '<div class="media text-muted pt-3">\
+          <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">\
+            <strong class="d-block text-gray-dark">' + tradeData.item.game + '</strong>\
+            <img src="img/' + tradeData.item.image +'" style="height:64px;padding-right:10px">\
+			<strong>Item : </strong>' + tradeData.item.displayName +'<br>\
+			<strong>Server : </strong>'+ tradeData.item.serverName +'<br>\
+			<strong>Trader : </strong>'+ tradeData.traderName+'<br>\
+			<strong>Price : </strong>'+ tradeData.price+'<br>\
+			<button class="btn btn-primary my-1 box-shadow float-right">Buy Now</button>\
+          </p>\
+        </div>';
 	offerList.appendChild(iDiv);
 }
 
