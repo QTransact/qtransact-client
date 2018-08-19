@@ -1,5 +1,3 @@
-# QTransact
-
 <img src="docs/QTransact.png">
 
 ## Descriere
