@@ -22,4 +22,5 @@ Aplicatia poate fi compilata pentru Android / iOS, dar interfata este accesibila
 # Screenshots
 
 <img src="docs/screenshot3.png">
+
 <img src="docs/screenshot1.png" width="33%"><img src="docs/screenshot2.png" width="33%"><img src="docs/screenshot5.png" width="33%">
