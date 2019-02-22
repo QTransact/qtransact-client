@@ -1,20 +1,17 @@
 <img src="docs/QTransact.png">
 
-## Descriere
+## Description
 
-QTransact este o platforma de tranzactionare a obiectelor virtuale pe o piata comuna, indiferent de “lumea” in care exista. De exemplu : se poate folosi pentru a tranzactiona obiecte de pe Minecraft pentru masini pe servere private de GTA 5. Procesul este automatizat si nu permite inselatoriile intre participantii la tranzactie. Sistemul poate fi implementat in orice joc multiplayer, printr-un plugin / modul care foloseste REST API-ul QTransact.
-Pentru jocurile care deja permit trocul intre utilizatori, QTransact le permite acestora sa vanda si sa cumpere bunuri virtuale de oriunde, nu doar din fata unui calculator, in cadrul jocului.
+QTransact is a trading platform for virtual goods, irrespective of the "world" they are contained in. For example, you can use the platform to validate transactions between a Minecraft private server and community GTA5 servers. The process of transfering ownership via the QTransact platform is automated by the API and does not allow scams. It can be implemented in any multiplayer game, through a plugin / module that uses the QTransact REST API.
 
-## Tehnologii
+If the target game already allows players to trade items between them, QTransact allows for remote transactions ( you don't have to be in front of a computer to do be able to trade ).
 
-Tranzactiile sunt procesate de un server principal, prin REST API-ul QTransact.
-Aplicatia de mobil se conecteaza la server de unde descarca ofertele si le afiseaza utilizatorului.
-Aplicatia a fost dezvoltata ca pagina web ( HTML + CSS + JS ) si ambalata pentru android / iOS cu Apache Cordova.
-Cerinte sistem
+## Technologies
 
-Aplicatia poate fi compilata pentru Android / iOS, dar interfata este accesibila si din browser.
+The transactions are processed by the main QTransact server, through the REST API.
+The mobile app ( qtransact-client ) connects to this server and requests the inventory and the offers for the user. This client is developed as a web page ( HTML + CSS + JS ) and it is packaged as an android / iOS app via Apache Cordova. ( This makes development easier and cross-platform -> it can even be used in a browser )
 
-# Cum functioneaza ?
+# How does it work?
 
 <img src="docs/scheme1.png">
 <img src="docs/scheme2.png">
